@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+   /*  border: 1px red solid; */
+}
+
+/* responsiveslide css */
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+  }
+  
+  .rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+  }
+  
+  .callbacks_container {
+    position: relative;
+    margin: auto;
+  }
+  .callbacks_container img {
+    height: 500px;
+    object-fit: cover;
+  }
+  .callbacks_container ul {
+    margin: 0px;
+  }
+  
+  .caption {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #333;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 230px;
+    padding: 20px;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+  }
+  .callbacks_nav {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 50px;
+    width: 30px;
+    background: transparent url("imagenes/flechas.png") no-repeat left top;
+    margin-top: -45px;
+  }
+  .callbacks_nav.next {
+    left: auto;
+    background-position: right top;
+    right: 0;
+  }
+  
+
+@media screen and (max-width: 480px){
+
+    .ancho{
+        width: 80%;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        box-shadow: 0px 1px 6px #ccc;
+        position: sticky;
+        top: 1px;
+        background-color: white;
+        z-index: 101;
+    }
+
+    header i{
+        color: #ff4048;
+        font-size: 50px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        position: sticky;
+        top: 70px;
+        z-index: 100;
+    }
+
+    .botonesmenu{
+        /* border: 1px blue solid; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #ff4048;
+    }
+    
+    .botonesmenu a{
+        text-decoration: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .botonesmenu a:hover{
+        background-color: white;
+        border-radius: 5px;
+        color: #ff4048;
+    }
+
+    .titulo{
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .titulo h1{
+        color: #ff4048;
+        padding-bottom: 20px;
+    }
+
+    .linea{
+        border: 4px black solid;
+        width: 70px;
+        margin: auto;
+    }
+
+    .contenido2{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .infocontenido2{
+        border-radius: 3px;
+        box-shadow: 0px 0px 6px #ccc;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .contenedorico{
+        border: 1px #ccc solid;
+        border-radius: 5px;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+    }
+    
+    .infocontenido2 i{
+        padding: 20px;
+        color: #ff4048;
+        font-size: 50px;
+    }
+
+    .infocontenido2 h2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .parallax{
+        background-image: url(imagenes/foto_parallaxs.jpg);
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -450px 80px;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 50px;
+    }
+
+    .parallax h1{
+        color: white;
+        font-size: 30px;
+        width: 120px;
+        line-height: 30px;
+        
+    }
+
+    .rojo{
+        color: #ff4048;
+    }
+
+    .parallax a{
+        background-color: #ff4048;
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    .redes{
+        width: 95%;
+        border: 2px #ff4048 solid;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .redes i{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px #ccc solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #ff4048;
+    }
+}
